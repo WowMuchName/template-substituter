@@ -4,14 +4,10 @@
   "description": "Flexible way to evaluate EJS templates in files",
   "main": "index.js",
   "scripts": {
-    "test": "rimraf temp && mocha --require ts-node/register test/*.ts",
-    "test:watch": "mocha --watch --watch-extensions ts --reporter min --require ts-node/register test/*.ts",
-    "test:coverage": "rimraf temp && nyc --extension .ts npm test && nyc report --reporter=html --reporter=lcov",
     "build": "tsc",
-    "build:release": "npm run clean && npm run test:coverage && npm run lint && npm run build && npm run docs",
+    "build:release": "npm run clean && npm run lint && npm run build",
     "build:watch": "tsc --watch",
     "lint": "tslint -p tsconfig.json -e test/*.ts",
-    "docs": "typedoc --out documentation --name BufferBuilder --mode file lib/index.ts",
     "clean": "rimraf .nyc_output coverage documentation web index.js index.d.ts index.js.map test/*.js test/*.d.ts test/*.js.map lib/*.js lib/*.d.ts lib/*.js.map temp"
   },
   "devDependencies": {
