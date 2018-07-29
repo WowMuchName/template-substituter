@@ -1,0 +1,10 @@
+node_modules
+index.js
+*.ejs
+coverage
+.nyc_output
+.sonarlint
+documentation
+index.map
+index.d.ts
+temp
